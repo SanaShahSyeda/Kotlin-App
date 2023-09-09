@@ -1,24 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-android:orientation="vertical"
-android:gravity="center"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".MainActivity"
-xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F8"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:theme="@style/Theme.KotlinApp">
 
     <TextView
-        android:id="@+id/txt1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/textView"
+        android:layout_width="391dp"
+        android:layout_height="63dp"
+        android:background="#673AB7"
+        android:text="Hello Toast "
+        android:textSize="34sp"
+        android:visibility="visible" />
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:id="@+id/toastbtn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="You clicked the button" />
+        android:background="#8A7BA5"
+        android:text="Toast" />
 
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="match_parent"
+        android:layout_height="527dp"
+        android:background="#E4DC96"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="60sp" />
+
+    <Button
+        android:id="@+id/countbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A590CC"
+        android:text="Count" />
 </LinearLayout>
