@@ -1,261 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:theme="@style/Theme.KotlinApp">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        app:srcCompat="@drawable/coffee" />
 
     <TextView
-        android:id="@+id/Heading"
+        android:id="@+id/choose_text"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:text="Mr Potato Head"
+        android:layout_height="45dp"
+        android:text="Choose Toppings"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textColor="#8A7A63"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-    <RelativeLayout
+    <CheckBox
+        android:id="@+id/cream"
+        android:layout_width="113dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="100dp"
+        android:text="Cream" />
+
+    <CheckBox
+        android:id="@+id/chocolate"
+        android:layout_width="113dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="-55dp"
+        android:text="Chocolate" />
+
+    <TextView
+        android:id="@+id/quantity"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp">
+        android:layout_height="33dp"
+        android:text="Quantity"
+        android:textAlignment="center"
+        android:textColor="#756751"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/body"
-            android:layout_width="match_parent"
-            android:layout_height="340dp"
-            app:srcCompat="@drawable/body" />
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="112dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="25dp"
+        android:text="-"
+        android:textSize="34sp"
+        android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/shoes_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/body"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="54dp"
-            android:layout_marginTop="-131dp"
-            android:layout_marginEnd="69dp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/shoes" />
+    <TextView
+        android:id="@+id/quantity_value"
+        android:layout_width="107dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="-70dp"
+        android:background="#DACEBD"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="#332E2E"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/arms_img"
-            android:layout_width="237dp"
-            android:layout_height="212dp"
-            android:layout_alignBaseline="@+id/shoes_img"
-            android:layout_alignBottom="@+id/body"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="69dp"
-            android:layout_marginEnd="72dp"
-            android:visibility="invisible"
-            android:layout_marginBottom="64dp"
-            app:srcCompat="@drawable/arms" />
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="112dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="-80dp"
+        android:gravity="center"
+        android:text="+"
+        android:textSize="34sp" />
 
-        <ImageView
-            android:id="@+id/ears_img"
-            android:layout_width="192dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/body"
-            android:layout_alignBottom="@+id/shoes_img"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="94dp"
-            android:layout_marginEnd="93dp"
-            android:visibility="invisible"
-            android:layout_marginBottom="172dp"
-            app:srcCompat="@drawable/ears" />
+    <Button
+        android:id="@+id/order"
+        android:layout_width="245dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="80dp"
+        android:background="#C5BCAE"
+        android:text="Order" />
 
-        <ImageView
-            android:id="@+id/mouth_img"
-            android:layout_width="117dp"
-            android:layout_height="55dp"
-            android:layout_alignBottom="@+id/body"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="132dp"
-            android:layout_marginEnd="130dp"
-            android:layout_marginBottom="118dp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/mouth" />
-
-        <ImageView
-            android:id="@+id/mustache_img"
-            android:layout_width="193dp"
-            android:layout_height="60dp"
-            android:layout_alignBottom="@+id/body"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="101dp"
-            android:layout_marginEnd="85dp"
-            android:visibility="invisible"
-            android:layout_marginBottom="148dp"
-            app:srcCompat="@drawable/moustache" />
-
-        <ImageView
-            android:id="@+id/nose_img"
-            android:layout_width="94dp"
-            android:layout_height="57dp"
-            android:layout_alignBottom="@+id/body"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="146dp"
-            android:layout_marginEnd="139dp"
-            android:layout_marginBottom="166dp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/nose" />
-
-        <ImageView
-            android:id="@+id/eyes_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/body"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="139dp"
-            android:layout_marginBottom="216dp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/eyes" />
-
-        <ImageView
-            android:id="@+id/hat_img"
-            android:layout_width="211dp"
-            android:layout_height="69dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="83dp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/hat" />
-
-        <ImageView
-            android:id="@+id/eyebrows_img"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:layout_alignBottom="@+id/shoes_img"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="121dp"
-            android:layout_marginBottom="223dp"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/eyebrows" />
-
-        <ImageView
-            android:id="@+id/glasses_img"
-            android:layout_width="166dp"
-            android:layout_height="65dp"
-            android:layout_alignBottom="@+id/mustache_img"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="111dp"
-            android:layout_marginEnd="102dp"
-            android:visibility="invisible"
-            android:layout_marginBottom="63dp"
-            app:srcCompat="@drawable/glasses" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="376dp"
-            android:layout_height="33dp"
-            android:layout_alignBottom="@+id/body"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="-1dp"
-            android:layout_marginBottom="-19dp"
-            android:text="Click his parts to add/remove them !"
-            android:textAlignment="center"
-            android:textColor="#1C1C1C"
-            android:textSize="20sp" />
-    </RelativeLayout>
-    <TableLayout
+    <TextView
+        android:id="@+id/summary"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="-240dp">
-        <TableRow>
-            <CheckBox
-                android:id="@+id/hat"
-                android:layout_width="122dp"
-                android:layout_marginLeft="80dp"
-                android:checked="false"
-                android:text="Hat"></CheckBox>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Order summary"
+        android:textColor="#715D3F"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-            <CheckBox
-                android:id="@+id/eyes"
-                android:layout_width="122dp"
-                android:layout_marginLeft="10dp"
-                android:checked="false"
-                android:text="Eyes"></CheckBox>
-        </TableRow>
-        <TableRow>
-
-            <CheckBox
-                android:id="@+id/eyebrows"
-                android:layout_width="122dp"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="10dp"
-                android:checked="false"
-                android:text="Eyebrows"></CheckBox>
-
-            <CheckBox
-                android:id="@+id/glasses"
-                android:layout_width="122dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:checked="false"
-                android:text="Glasses"></CheckBox>
-        </TableRow>
-        <TableRow>
-            <CheckBox
-                android:id="@+id/nose"
-                android:layout_width="122dp"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="10dp"
-                android:checked="false"
-                android:text="Nose"></CheckBox>
-
-            <CheckBox
-                android:id="@+id/mouth"
-                android:layout_width="122dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:checked="false"
-                android:text="Mouth"></CheckBox>
-        </TableRow>
-        <TableRow>
-            <CheckBox
-                android:id="@+id/mustache"
-                android:layout_width="122dp"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="10dp"
-                android:checked="false"
-                android:text="Mustache"></CheckBox>
-
-            <CheckBox
-                android:id="@+id/ears"
-                android:layout_width="122dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:checked="false"
-                android:text="Ears"></CheckBox>
-        </TableRow>
-        <TableRow>
-            <CheckBox
-                android:id="@+id/arms"
-                android:layout_width="122dp"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="10dp"
-                android:checked="false"
-                android:text="Arms"></CheckBox>
-
-            <CheckBox
-                android:id="@+id/shoes"
-                android:layout_width="122dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:checked="false"
-                android:text="Shoes"></CheckBox>
-        </TableRow>
-    </TableLayout>
+    <TextView
+        android:id="@+id/order_summary"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:textAlignment="center"
+        android:textSize="24sp"/>
 </LinearLayout>

@@ -1,68 +1,57 @@
 package com.example.kotlin_app
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.Editable
 import android.view.View
+import android.widget.Button
 import android.widget.CheckBox
-import android.widget.CompoundButton
+import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.random.Random
 
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        var count=1
+        var cream="NO"
+        var chocolate="NO"
+        var price = 4.0;
         setContentView(R.layout.activity_main)
-        var hat = findViewById<CheckBox>(R.id.hat)
-        var eyes = findViewById<CheckBox>(R.id.eyes)
-        var ears = findViewById<CheckBox>(R.id.ears)
-        var nose = findViewById<CheckBox>(R.id.nose)
-        var arms = findViewById<CheckBox>(R.id.arms)
-        var mouth = findViewById<CheckBox>(R.id.mouth)
-        var shoes = findViewById<CheckBox>(R.id.shoes)
-        var glasses = findViewById<CheckBox>(R.id.glasses)
-        var eyebrows = findViewById<CheckBox>(R.id.eyebrows)
-        var mustache = findViewById<CheckBox>(R.id.mustache)
+        var plus = findViewById<Button>(R.id.plus)
+        var minus = findViewById<Button>(R.id.minus)
+        var order = findViewById<Button>(R.id.order)
+        var cream_topping = findViewById<CheckBox>(R.id.cream)
+        var quantity = findViewById<TextView>(R.id.quantity_value)
+        var chocolate_topping = findViewById<CheckBox>(R.id.chocolate)
+        var order_summary = findViewById<TextView>(R.id.order_summary)
 
-        hat.setOnCheckedChangeListener { buttonView, isChecked ->
-            val hat_img = findViewById<ImageView>(R.id.hat_img)
-            if (isChecked) hat_img.visibility = View.VISIBLE else hat_img.visibility = View.INVISIBLE
-        }
-        eyes.setOnCheckedChangeListener { buttonView, isChecked ->
-            val eyes_img = findViewById<ImageView>(R.id.eyes_img)
-            if (isChecked)  eyes_img.visibility = View.VISIBLE else eyes_img.visibility = View.INVISIBLE
-        }
-        nose.setOnCheckedChangeListener { buttonView, isChecked ->
-            val nose_img = findViewById<ImageView>(R.id.nose_img)
-            if (isChecked) nose_img.visibility = View.VISIBLE else nose_img.visibility = View.INVISIBLE
-        }
-        ears.setOnCheckedChangeListener { buttonView, isChecked ->
-            val ears_img = findViewById<ImageView>(R.id.ears_img)
-            if (isChecked)  ears_img.visibility = View.VISIBLE else ears_img.visibility = View.INVISIBLE
-        }
-        eyebrows.setOnCheckedChangeListener { buttonView, isChecked ->
-            val eyebrows_img = findViewById<ImageView>(R.id.eyebrows_img)
-            if (isChecked)  eyebrows_img.visibility = View.VISIBLE else eyebrows_img.visibility = View.INVISIBLE
-        }
-        glasses.setOnCheckedChangeListener { buttonView, isChecked ->
-            val glasses_img = findViewById<ImageView>(R.id.glasses_img)
-            if (isChecked)  glasses_img.visibility = View.VISIBLE else glasses_img.visibility = View.INVISIBLE
-        }
-        mouth.setOnCheckedChangeListener { buttonView, isChecked ->
-            val mouth_img = findViewById<ImageView>(R.id.mouth_img)
-            if (isChecked)  mouth_img.visibility = View.VISIBLE else mouth_img.visibility = View.INVISIBLE
-        }
-        arms.setOnCheckedChangeListener { buttonView, isChecked ->
-            val arms_img = findViewById<ImageView>(R.id.arms_img)
-            if (isChecked)  arms_img.visibility = View.VISIBLE else arms_img.visibility = View.INVISIBLE
-        }
-        mustache.setOnCheckedChangeListener { buttonView, isChecked ->
-            val mustache_img = findViewById<ImageView>(R.id.mustache_img)
-            if (isChecked)  mustache_img.visibility = View.VISIBLE else mustache_img.visibility = View.INVISIBLE
-        }
-        shoes.setOnCheckedChangeListener { buttonView, isChecked ->
-            val shoes_img = findViewById<ImageView>(R.id.shoes_img)
-            if (isChecked)  shoes_img.visibility = View.VISIBLE else shoes_img.visibility = View.INVISIBLE
-        }
+        plus.setOnClickListener(View.OnClickListener {
+            count++
+            quantity.setText("$count")
+        })
+        minus.setOnClickListener(View.OnClickListener {
+            if(count!=1){
+                count--
+                quantity.setText("$count")
+            }
+        })
+        order.setOnClickListener(View.OnClickListener {
+            if(cream_topping.isChecked) {
+                cream= "YES"
+                price = price + 0.5
+            }
+            if(chocolate_topping.isChecked){
+                chocolate="YES"
+                price = price + 1.0
+            }
+            order_summary.text=
+                "\nAdd whipped cream ?$cream\n Add Chocolate?$chocolate\n Quanity$count\n\n Price:$$price\n THANKYOU !! "
+        })
     }
 }
