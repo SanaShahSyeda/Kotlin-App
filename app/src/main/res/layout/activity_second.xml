@@ -6,68 +6,9 @@
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/name_txt"
-        android:layout_width="316dp"
-        android:layout_height="43dp"
-        android:background="#C4D1CF"
-        android:text="NAME:"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="321dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="text" />
-
-    <TextView
-        android:id="@+id/email_txt"
-        android:layout_width="316dp"
-        android:layout_height="43dp"
-        android:background="#C4D1CF"
-        android:text="EMAIL:"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="318dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="text" />
-
-    <TextView
-        android:id="@+id/department_txt"
-        android:layout_width="316dp"
-        android:layout_height="43dp"
-        android:background="#C4D1CF"
-        android:text="DEPARTMENT:"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/department"
-        android:layout_width="321dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="text" />
-
-
-    <Button
-        android:id="@+id/save"
+    <ImageView
+        android:id="@+id/resulting_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="#949BC2"
-        android:text="SAVE PROFILE"
-        android:textSize="20sp" />
-
-
-
+        android:layout_height="match_parent"
+        tools:srcCompat="@tools:sample/avatars" />
 </LinearLayout>
