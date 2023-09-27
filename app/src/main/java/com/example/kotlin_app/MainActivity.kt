@@ -2,62 +2,57 @@ package com.example.kotlin_app
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
-import android.widget.ImageView
+import android.widget.Button
+import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.TextView
+import android.widget.Toast
+import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 
 
 
-@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
-    private lateinit var radioGroup: RadioGroup
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-          var cat = findViewById<ImageView>(R.id.cat)
-          var dog = findViewById<ImageView>(R.id.dog)
-          var coffee = findViewById<ImageView>(R.id.coffee)
-          var parrot = findViewById<ImageView>(R.id.parrot)
-          var android = findViewById<ImageView>(R.id.android)
-          var scenery = findViewById<ImageView>(R.id.scenery)
-
-        cat.setOnClickListener(View.OnClickListener {
-            var second_activity = Intent(this@MainActivity, SecondActivity::class.java).also {
-                it.putExtra("id",R.drawable.cat)
-                startActivity(it)
+        var toolbar: Toolbar = findViewById(R.id.tool_bar)
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean{
+        menuInflater.inflate(R.menu.options_menu,menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean{
+        when(item.itemId) {
+            R.id.main_courses -> {
+                    // Toast.makeText(this,"Main Courses item is selected", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@MainActivity, Main_Courses::class.java).also{
+                        startActivity(it)
+                    }
+                    return true
             }
-        })
-        dog.setOnClickListener(View.OnClickListener {
-            var second_activity = Intent(this@MainActivity, SecondActivity::class.java).also {
-                it.putExtra("id",R.drawable.dog)
-                startActivity(it)
+            R.id.appetizers-> {
+                // Toast.makeText(this,"Appetizers item is selected", Toast.LENGTH_SHORT).show()
+                val intent= Intent(this@MainActivity, Appetizers::class.java).also {
+                    startActivity(it)
+                }
+                return true
             }
-        })
-        coffee.setOnClickListener(View.OnClickListener {
-            var second_activity = Intent(this@MainActivity, SecondActivity::class.java).also {
-                it.putExtra("id",R.drawable.coffee)
-                startActivity(it)
+            R.id.desserts -> {
+                // Toast.makeText(this,"Desserts item is selected", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@MainActivity, Desserts::class.java).also {
+                    startActivity(it)
+                }
+                return true
             }
-        })
-        parrot.setOnClickListener(View.OnClickListener {
-            var second_activity = Intent(this@MainActivity, SecondActivity::class.java).also {
-                it.putExtra("id",R.drawable.parrot)
-                startActivity(it)
-            }
-        })
-        android.setOnClickListener(View.OnClickListener {
-            var second_activity = Intent(this@MainActivity, SecondActivity::class.java).also {
-                it.putExtra("id",R.drawable.android)
-                startActivity(it)
-            }
-        })
-        scenery.setOnClickListener(View.OnClickListener {
-            var second_activity = Intent(this@MainActivity, SecondActivity::class.java).also {
-                it.putExtra("id",R.drawable.scenery)
-                startActivity(it)
-            }
-        })
+            else -> return super.onOptionsItemSelected(item)
         }
+    }
 }
+
+

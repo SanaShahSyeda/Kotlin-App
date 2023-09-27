@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/appetizers"
+        android:title="Appetizers"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/main_courses"
+        android:title="Main Courses"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/desserts"
+        android:title="Desserts"
+        app:showAsAction="never"/>
+</menu>

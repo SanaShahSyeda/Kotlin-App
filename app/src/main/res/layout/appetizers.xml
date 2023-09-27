@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/springrolls"
+            android:layout_width="223dp"
+            android:layout_height="205dp"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/springrolls" />
+        <TextView
+            android:id="@+id/springrolls_txt"
+            android:layout_width="213dp"
+            android:layout_height="42dp"
+            android:background="#B99E9E"
+            android:text="Spring Rolls"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="0"
+            app:layout_row="1" />
+        <ImageView
+            android:id="@+id/chickenwings"
+            android:layout_width="209dp"
+            android:layout_height="200dp"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/chickenwings" />
+        <TextView
+            android:id="@+id/chickenwings_txt"
+            android:layout_width="213dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="-30dp"
+            android:background="#B99E9E"
+            android:text="Chicken Wings"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="1"
+            app:layout_row="1" />
+        <ImageView
+            android:id="@+id/frenchfries"
+            android:layout_width="218dp"
+            android:layout_height="212dp"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/frenchfries" />
+        <TextView
+            android:id="@+id/frenchfries_txt"
+            android:layout_width="213dp"
+            android:layout_height="54dp"
+            android:background="#B99E9E"
+            android:text="French Fries"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="0"
+            app:layout_row="2" />
+        <ImageView
+            android:id="@+id/stuffedmushrooms"
+            android:layout_width="185dp"
+            android:layout_height="185dp"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:srcCompat="@drawable/stuffedmushrooms" />
+        <TextView
+            android:id="@+id/spaghetti_txt"
+            android:layout_width="213dp"
+            android:layout_height="42dp"
+            android:background="#B99E9E"
+            android:text="Spaghetti"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="0"
+            app:layout_row="3" />
+        <ImageView
+            android:id="@+id/spaghetti"
+            android:layout_width="221dp"
+            android:layout_height="267dp"
+            app:layout_column="0"
+            app:layout_row="2"
+            app:srcCompat="@drawable/spaghetti" />
+
+        <TextView
+            android:id="@+id/stuffedmushrooms_txt"
+            android:layout_width="213dp"
+            android:layout_height="87dp"
+            android:background="#B99E9E"
+            android:text="Stuffed Mushrooms"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="1"
+            app:layout_row="2" />
+        <ImageView
+            android:id="@+id/vegetablesamosa"
+            android:layout_width="185dp"
+            android:layout_height="247dp"
+            app:layout_column="1"
+            app:layout_row="2"
+            app:srcCompat="@drawable/vegetablesamosa" />
+        <TextView
+            android:id="@+id/vegetablesamosa_txt"
+            android:layout_width="213dp"
+            android:layout_height="42dp"
+            android:background="#B99E9E"
+            android:text="Vegetable Samosa"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="1"
+            app:layout_row="3" />
+    </androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

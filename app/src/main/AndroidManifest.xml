@@ -11,10 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinApp"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        tools:ignore="ExtraText">
         <activity
             android:name=".SecondActivity"
             android:exported="false" />
+        <activity
+            android:name=".Main_Courses"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.KotlinApp"/>
+        <activity
+            android:name=".Appetizers"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.KotlinApp"/>
+        <activity
+            android:name=".Desserts"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.KotlinApp"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

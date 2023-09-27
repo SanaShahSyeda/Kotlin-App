@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/whitesaucepasta"
+                android:layout_width="223dp"
+                android:layout_height="205dp"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@drawable/whitesaucepasta" />
+            <TextView
+                android:id="@+id/whitesaucepasta_txt"
+                android:layout_width="213dp"
+                android:layout_height="42dp"
+                android:background="#B99E9E"
+                android:text="White Sauce Pasta"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="0"
+                app:layout_row="1" />
+            <ImageView
+                android:id="@+id/kadhaichicken"
+                android:layout_width="209dp"
+                android:layout_height="200dp"
+                app:layout_column="1"
+                app:layout_row="0"
+                app:srcCompat="@drawable/kadhaichicken" />
+            <TextView
+                android:id="@+id/kadhaichicken_txt"
+                android:layout_width="213dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-30dp"
+                android:background="#B99E9E"
+                android:text="kadhai Chicken"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_row="1" />
+            <ImageView
+                android:id="@+id/muttoncurry"
+                android:layout_width="218dp"
+                android:layout_height="212dp"
+                app:layout_column="0"
+                app:layout_row="1"
+                app:srcCompat="@drawable/muttoncurry" />
+            <TextView
+                android:id="@+id/muttoncurry_txt"
+                android:layout_width="213dp"
+                android:layout_height="54dp"
+                android:background="#B99E9E"
+                android:text="Mutton Curry"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="0"
+                app:layout_row="2" />
+            <ImageView
+                android:id="@+id/fishcurry"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                app:layout_column="1"
+                app:layout_row="1"
+                app:srcCompat="@drawable/fishcurry" />
+            <TextView
+                android:id="@+id/biryani_txt"
+                android:layout_width="213dp"
+                android:layout_height="42dp"
+                android:background="#B99E9E"
+                android:text="Biryani"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="0"
+                app:layout_row="3" />
+            <ImageView
+                android:id="@+id/biryani"
+                android:layout_width="221dp"
+                android:layout_height="267dp"
+                app:layout_column="0"
+                app:layout_row="2"
+                app:srcCompat="@drawable/biryani" />
+            <TextView
+                android:id="@+id/fishcurry_txt"
+                android:layout_width="213dp"
+                android:layout_height="42dp"
+                android:background="#B99E9E"
+                android:text="Fish Curry"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_row="2" />
+            <ImageView
+                android:id="@+id/tikkamasala"
+                android:layout_width="185dp"
+                android:layout_height="247dp"
+                app:layout_column="1"
+                app:layout_row="2"
+                app:srcCompat="@drawable/tikkamasala" />
+            <TextView
+                android:id="@+id/tikkamasala_txt"
+                android:layout_width="213dp"
+                android:layout_height="42dp"
+                android:background="#B99E9E"
+                android:text="Tikka Masala"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_row="3" />
+        </androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
