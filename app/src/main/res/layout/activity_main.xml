@@ -6,9 +6,9 @@
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
-    <Toolbar
+    <ImageView
+        android:id="@+id/hot_chocolate"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/tool_bar"/>
-
+        android:layout_height="711dp"
+        app:srcCompat="@drawable/hotchocolate" />
 </LinearLayout>
