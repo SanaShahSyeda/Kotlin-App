@@ -5,10 +5,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:gravity="center_horizontal">
-
-    <ImageView
-        android:id="@+id/hot_chocolate"
+    <Toolbar
+        android:id="@+id/tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="711dp"
-        app:srcCompat="@drawable/hotchocolate" />
+        android:layout_height="match_parent"
+        android:background="#CAA5A5" />
 </LinearLayout>

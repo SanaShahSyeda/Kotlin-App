@@ -2,15 +2,23 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/appetizers"
-        android:title="Appetizers"
-        app:showAsAction="never"/>
+        android:id="@+id/search"
+        android:icon="@drawable/baseline_search_24"
+        app:showAsAction="ifRoom"
+        android:title="Search" />
     <item
-        android:id="@+id/main_courses"
-        android:title="Main Courses"
-        app:showAsAction="never"/>
+        android:id="@+id/openinfull"
+        android:title="Open In Full"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/baseline_open_in_full_24"/>
     <item
-        android:id="@+id/desserts"
-        android:title="Desserts"
-        app:showAsAction="never"/>
+        android:id="@+id/lastpage"
+        android:title="Last Page"
+        android:icon="@drawable/baseline_last_page_24"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/Firstpage"
+        android:title="First Page"
+        android:icon="@drawable/baseline_first_page_24"
+        app:showAsAction="ifRoom"/>
 </menu>
